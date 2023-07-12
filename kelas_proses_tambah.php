@@ -4,7 +4,7 @@ require 'koneksi.php';
 if (isset($_POST['simpan'])) {
     $tingkat_bencana = $_POST['tingkat_bencana'];
 
-    $query = "INSERT INTO tbl_kelas VALUES('', '$tingkat_bencana')";
+    $query = "INSERT INTO kategori_bencana VALUES('', '$tingkat_bencana')";
     $result = mysqli_query($koneksi, $query);
 
     if ($result) {

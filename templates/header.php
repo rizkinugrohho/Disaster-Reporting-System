@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['login'])) {
-  header("Location: index.php");
-  exit;
+    header("Location: index.php");
+    exit;
 }
 
 ?>
@@ -31,7 +31,7 @@ if (!isset($_SESSION['login'])) {
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
         <a class="nav-link px-3 text-white" onclick="return confirm('Yakin ingin keluar?')" href="logout.php">
-          <?= $_SESSION['nama_user'] ?> anda login sebagai <?= $_SESSION['level'] ?>, Keluar
+          <?=$_SESSION['nama_user']?> anda login sebagai <?=$_SESSION['level']?>, Keluar
           <span data-feather="log-out" class="align-text-bottom"></span>
         </a>
       </div>
@@ -61,7 +61,7 @@ if (!isset($_SESSION['login'])) {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="siswa.php">
+              <a class="nav-link" href="laporan.php">
                 <span data-feather="file-plus" class="align-text-bottom"></span>
                 Data Bencana
               </a>
@@ -71,20 +71,6 @@ if (!isset($_SESSION['login'])) {
               <a class="nav-link" href="users.php">
                 <span data-feather="users" class="align-text-bottom"></span>
                 Data Users
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="transaksi.php">
-                <span data-feather="dollar-sign" class="align-text-bottom"></span>
-                Transaksi
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="laporan.php">
-                <span data-feather="archive" class="align-text-bottom"></span>
-                Laporan
               </a>
             </li>
 
